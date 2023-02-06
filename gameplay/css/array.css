@@ -1,0 +1,248 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+
+:root {
+    background-color: #efe7e5;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Henny Penny";
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+    padding: 0px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+header .logo {
+    font-weight: bolder;
+    font-size: 25px;
+    color: #f2cc0f;
+}
+
+header .navbar ul {
+    list-style: none;
+}
+
+header .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+header .navbar ul li a {
+    font-size: 20px;
+    padding: 20px;
+    color: #333;
+    display: block;
+}
+
+header .navbar ul li a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+header .navbar ul li ul {
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background-color: #fff;
+    display: none;
+}
+
+header .navbar ul li ul li {
+    width: 100%;
+    border-top: 1px solid #000;
+}
+
+header .navbar ul li ul li ul {
+    left: 200px;
+    top: 0;
+}
+
+header .navbar ul li:hover>ul {
+    display: initial;
+}
+
+#menu-bar {
+    display: none;
+}
+
+header label {
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    display: none;
+
+}
+
+
+@media(max-width:991px) {
+    header {
+        padding: 20px;
+    }
+
+    header label {
+        display: initial;
+
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        border-top: 1px solid #000;
+        display: none;
+    }
+
+    header .navbar ul li {
+        width: 100%;
+    }
+
+    header .navbar ul li ul {
+        position: relative;
+        width: 100%;
+    }
+
+    header .navbar ul li ul li {
+        background-color: #fff;
+    }
+
+    header .navbar ul li ul li ul {
+        width: 100%;
+        left: 0;
+    }
+
+    #menu-bar:checked~.navbar {
+        display: initial;
+    }
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+}
+
+/*--slider---*/
+.carousel-item {
+    height: 100vh;
+    min-height: 300px;
+    background: no-repeat scroll center scroll;
+    -webkit-background-siza: cover;
+    background-size: cover;
+}
+
+.carousel-item::before {
+    content: "";
+    display: block;
+    padding: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #000;
+    opacity: 0.7;
+}
+
+h4 {
+    text-decoration: none;
+
+}
+
+p {
+    line-height: 25px;
+
+}
+
+span img {
+    width: 400px;
+    height: 250px;
+    float: right;
+    margin-left: 20px;
+    border: 7px;
+}
+
+.card {
+    background: #fff;
+    width: 720px;
+    height: 270px;
+    margin: 10px;
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cards {
+    width: 300px;
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.carde-img img {
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.carde-body h2 {
+    text-align: center;
+}
+
+.carde-body p {
+    text-align: justify;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.carde-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.carde-header button {
+    width: 150px;
+    background-color: black;
+    color: #fff;
+    border-radius: 15px;
+    border: 2px solid black;
+    padding: 6px;
+    font-size: 17px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: 0.2s;
+
+}
+
+.carde-header button:hover {
+    background-color: #fff;
+    color: #000;
+    border: 2px solid black;
+}
+
+.cards:hover {
+    box-shadow: 3.9px 7.8px 7.8px hsl(odeg, 0% 0%/ 0.38);
+}
